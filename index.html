@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Temporizador estilo pomodoro">
+  <title>Focus timer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script type="module" src="main.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <div class="controls-timer-wrapper">
+      <section id="timer">
+        <span id="minutes">25</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </section>
+      <section id="controls">
+        <button 
+          class="ph ph-play-circle"
+          data-controls="play"
+        ></button>
+        <button 
+          class="ph ph-stop-circle"
+          data-controls="reset"
+        ></button>
+        <button 
+          class="ph ph-plus-circle"
+          data-controls="add"
+        ></button>
+        <button 
+          class="ph ph-minus-circle"
+          data-controls="minus"
+        ></button>
+      </section>
+    </div>
+    <aside id="appearance">
+      <button 
+        class="ph ph-tree"
+        data-appearance = "tree"
+      >
+
+      </button>
+      <button 
+        class="ph ph-cloud-rain"
+        data-appearance = "rain"
+      >
+
+      </button>
+      <button 
+        class="ph ph-coffee"
+        data-appearance = "coffee"
+      >
+
+      </button>
+      <button 
+        class="ph ph-flame"
+        data-appearance = "flame"
+      >
+
+      </button>
+    </aside>
+  </main>
+</body>
+</html>

@@ -1,0 +1,108 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+  font-family: sans-serif;
+
+
+  --text-color:hsla(240, 6%, 21%, 1);
+  --bg-appearence-color:hsla(240, 9%, 89%, 1);
+  --bg-appearence-color-hover:hsla(194, 97%, 31%, 1);
+  --text-appearence-color-hover:hsla(0, 0%, 100%, 1);
+  --bg-app-color:hsl(207, 30%, 75%);
+}
+
+body{
+  font-size: 1.6rem;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  padding: 2rem;
+}
+html{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition-duration: 1s;
+}
+html.flame{
+  background-image: url('./assets/flame.jpg');
+}
+html.rain{
+  background-image: url('./assets/rain.jpg');
+}
+html.tree{
+  background-image: url('./assets/tree.jpg');
+}
+html.coffee{
+  background-image: url('./assets/coffe.jpg');
+}
+button{
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.app{
+  display: flex;
+  align-items: center;
+  gap: 7rem;
+  background-color: var(--bg-app-color);
+  padding: 2rem;
+  border-radius: .5rem;
+  animation: scale-up-ver-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.controls-timer-wrapper #controls{
+  display: flex;
+  justify-content: space-between;
+}
+
+.app #timer span{
+  font-size: 10rem;
+  color: var(--text-color);
+}
+.app #controls button{
+  font-size: 4rem;
+  border: none;
+  background-color: transparent;
+}
+.app #appearance{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+.app #appearance button{
+  background-color: var(--bg-appearence-color);
+  border: none;
+  border-radius: .5rem;
+  padding: 2rem 1.5rem;
+  font-size: 5rem;
+}
+.app #appearance button:focus{
+  background-color: var(--bg-appearence-color-hover);
+  color: var(--text-appearence-color-hover);
+}
+
+@media (max-width:600px) {
+  .app{
+    flex-direction: column;
+  }
+}
+
+@keyframes scale-up-ver-bottom {
+  0% {
+    -webkit-transform: scaleY(0.4);
+            transform: scaleY(0.4);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+}
