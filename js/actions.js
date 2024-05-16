@@ -12,6 +12,9 @@ export function tree(){
 
   state.isMute = document.documentElement.classList.toggle("music-on")
   if(state.isMute){
+    sounds.rainAudio.pause()
+    sounds.flameAudio.pause()
+    sounds.coffeeAudio.pause()
     sounds.treeAudio.play()
     return
   }
@@ -26,6 +29,9 @@ export function rain(){
 
   state.isMute = document.documentElement.classList.toggle("music-on")
   if(state.isMute){
+    sounds.coffeeAudio.pause()
+    sounds.flameAudio.pause()
+    sounds.treeAudio.pause()
     sounds.rainAudio.play()
     return
   }
@@ -40,6 +46,9 @@ export function flame(){
 
   state.isMute = document.documentElement.classList.toggle("music-on")
   if(state.isMute){
+    sounds.rainAudio.pause()
+    sounds.coffeeAudio.pause()
+    sounds.treeAudio.pause()
     sounds.flameAudio.play()
     return
   }
@@ -54,6 +63,9 @@ export function coffee(){
 
   state.isMute = document.documentElement.classList.toggle("music-on")
   if(state.isMute){
+    sounds.rainAudio.pause()
+    sounds.flameAudio.pause()
+    sounds.treeAudio.pause()
     sounds.coffeeAudio.play()
     return
   }else{

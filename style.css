@@ -12,7 +12,7 @@
   --bg-appearence-color:hsla(240, 9%, 89%, 1);
   --bg-appearence-color-hover:hsla(194, 97%, 31%, 1);
   --text-appearence-color-hover:hsla(0, 0%, 100%, 1);
-  --bg-app-color:hsl(207, 30%, 75%);
+  --bg-app-color:hsla(207, 49%, 69%, 0.726);
 }
 
 body{
